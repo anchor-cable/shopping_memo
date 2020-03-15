@@ -5,11 +5,6 @@
 // import User from 'path/to/interfaces';
 
 
-export type User = {
-  id: number
-  name: string
-}
-
 export type ShoppingMemo = {
   id: number
   item_name: string
