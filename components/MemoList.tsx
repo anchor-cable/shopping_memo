@@ -1,19 +1,29 @@
 import * as React from 'react'
-import ListItem from './ListItem'
-import { User } from '../interfaces'
+import ListItem from '../components/ListItem'
+import { ShoppingMemo } from '../interfaces';
 
 type Props = {
-  items: User[]
+  items: ShoppingMemo[]
 }
 
 const List: React.FunctionComponent<Props> = ({ items }) => (
-  <ul>
+<>
+  {items &&(
+    <ul>
     {items.map(item => (
       <li key={item.id}>
         <ListItem data={item} />
       </li>
     ))}
   </ul>
-)
+  )}
+  {!items &&(
+   <ul>
+     おや。なーんもない。
+   </ul> 
+  )}
+</>
+);
+
 
 export default List
