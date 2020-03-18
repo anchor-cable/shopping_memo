@@ -6,7 +6,7 @@
 
 
 export type ShoppingMemo = {
-  id?: number
+  id: number
   item_name: string
   amount: number
   unit: string
